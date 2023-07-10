@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number game</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="container">
+    <h1>Guess <span class="nowrap">the number !!</span></h1>
+    <p id="status">Click <b>"start game button"</b> to start the game.</p>
+    <p id="hint-section"></p>
+    <button id="start-game" onclick="startGame()">Start Game</button>
+    <form id="reset">
+    <input type="text" id="answer" placeholder="Enter the number here ⬅️">
+    </form>
+    
+    <button id="Check" onclick="checkNumber()">Check Number</button>
+    <button id="generate-new-number" onclick="generateNewNumber()">Generate new number</button>
+    </div>
+</body>
+</html>
