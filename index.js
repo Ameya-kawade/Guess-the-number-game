@@ -20,7 +20,7 @@ function checkNumber(){
     if(!number_found && isEntered){
         if( Number(answerEl.value) === number){
             tries++;
-            statusEL.textContent = "Congratulations 🥳🥳🥳 !!You found the number in "+ tries +" tries.To play the game again click the 'Generate new number button'.";
+            statusEL.textContent = "Congratulations 🥳🥳🥳 !!You found the number in "+ tries +" try.To play the game again click the 'Generate new number button'.";
             hintEl.textContent = "";
             number_found = true;
             isEntered = false;

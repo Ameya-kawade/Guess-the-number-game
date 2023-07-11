@@ -7,17 +7,31 @@
 }
 
 body{
-    background-color: antiquewhite;
+     background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+     background-size: 400% 400%;
     min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition: ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container{
-    min-height: 100vh;
+    min-height: fit-content;
+    max-width: fit-content;
+    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: white;
+    padding: 40px 15px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 8px 5px gray;
 }
 h1{
     margin: 10px;
@@ -32,25 +46,69 @@ p{
 input{
     display: block;
     margin: 20px;
-    padding: 5px;
+    padding: 10px 20px;
     font-size: 1rem;
     text-align: center;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(226, 224, 224);
 }
 
 button{
     font-size: 1rem;
     display: block;
-    padding: 10px 15px;
-    background-color: white;
+    padding: 12px 20px;
+    background: linear-gradient(to right, #86A8E7 50%, rgb(226, 224, 224) 50%);
+    background-size: 201% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
     border: none;
     border-radius: 5px;
     margin: 10px;
 }
 
 button:hover{
-    background-color: aliceblue;
+    color: white;
+    font-weight: 600;
+    background-position: left bottom;
 }
 
 .nowrap{
     white-space: nowrap;
+}
+
+@keyframes rotate {
+    0%{
+        background-position: 0% 50%;
+    }
+    25%{
+        background-position: 50% 100%;
+    }
+    50%{
+        background-position: 100% 0%;
+    }
+    75%{
+        background-position: 0% 25%;
+    }
+    100%{
+        background-position: 50% 100%;
+    }
+}
+
+@keyframes button {
+    0%{
+        background-position: 0% 50%;
+    }
+    25%{
+        background-position: 50% 100%;
+    }
+    50%{
+        background-position: 100% 0%;
+    }
+    75%{
+        background-position: 0% 25%;
+    }
+    100%{
+        background-position: 50% 100%;
+    }
 }
