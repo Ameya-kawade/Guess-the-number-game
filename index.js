@@ -17,7 +17,7 @@ function startGame(){
 }
 
 function checkNumber(){
-    if(!number_found && isEntered){
+    if(!number_found && isEntered && answerEl.value != ""){
         if( Number(answerEl.value) === number){
             tries++;
             statusEL.textContent = "Congratulations 🥳🥳🥳 !!You found the number in "+ tries +" try.To play the game again click the 'Generate new number button'.";
@@ -32,10 +32,10 @@ function checkNumber(){
             
             statusEL.textContent = "☹️ Sorry you guessed the wrong number !!"
             if (Number(answerEl.value) > number) {
-                hintEl.textContent = "Hint : Enter a smaller number than this one."
+                hintEl.textContent = "Hint : Enter a smaller number "+ answerEl.value;
             }
             else{
-                hintEl.textContent = "Hint : Enter a greater number than this one."
+                hintEl.textContent = "Hint : Enter a greater number " + answerEl.value;
             }
            reset.reset();
         }
@@ -49,5 +49,8 @@ function generateNewNumber(){
         number = Math.floor(Math.random()*100 + 1);
         hintEl.textContent = "";
         startGame();
+    }
+    else{
+        window.alert("You can generate a new number after finding the current number.");
     }
 }
