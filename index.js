@@ -17,6 +17,9 @@ function startGame(){
 }
 
 function checkNumber(){
+    if(isNaN(answerEl.value)){
+        statusEL.textContent = "Please enter a number!!";
+    }
     if(!number_found && isEntered && answerEl.value != ""){
         if( Number(answerEl.value) === number){
             tries++;
@@ -40,6 +43,7 @@ function checkNumber(){
            reset.reset();
         }
     }
+    
 }
 
 function generateNewNumber(){
