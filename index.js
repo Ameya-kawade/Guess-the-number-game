@@ -17,7 +17,7 @@ function startGame(){
 }
 
 function checkNumber(){
-    if(isNaN(answerEl.value)){
+    if(isNaN(answerEl.value) && !number_found && isEntered){
         statusEL.textContent = "Please enter a number!!";
         hintEl.textContent = "";
          reset.reset();
