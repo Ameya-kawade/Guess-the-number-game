@@ -37,10 +37,10 @@ function checkNumber(){
             
             statusEL.textContent = "☹️ Sorry you guessed the wrong number !!"
             if (Number(answerEl.value) > number) {
-                hintEl.textContent = "Hint : Enter a smaller number "+ answerEl.value;
+                hintEl.textContent = "Hint : Enter a smaller number than "+ answerEl.value;
             }
             else{
-                hintEl.textContent = "Hint : Enter a greater number " + answerEl.value;
+                hintEl.textContent = "Hint : Enter a greater number than " + answerEl.value;
             }
            reset.reset();
         }
